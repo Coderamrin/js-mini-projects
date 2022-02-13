@@ -1,0 +1,41 @@
+.container {
+  max-width: 250px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+.input {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-btn {
+    width: 25%;
+    padding: 5px 0;
+  }
+}
+
+.todo {
+  &-item {
+    // text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: bisque;
+    padding: 0 20px;
+    cursor: pointer;
+    word-wrap: break-word;
+  }
+}
+
+.item-done {
+  text-decoration: line-through;
+  color: gray;
+}
