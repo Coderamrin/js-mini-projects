@@ -1,0 +1,53 @@
+// breakpoints mixins.
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  'medium': '40em',
+  'large': '64em',
+  'xlarge': '87.5em',
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  'small': '39.9375em',
+  'medium': '63.9375em',
+  'large': '87.4375em',
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+
+$grid-columns: 12;
+
+@mixin container($small: 20px, $large: 100px, $isGrid: true) {
+  width: 100%;
+  padding: 0 $small;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @include breakpoint-up(medium) {
+    padding: 0 $large;
+  }
+
+  @if $isGrid {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+@mixin column($size, $breakpoint: medium) {
+  @include breakpoint-up($breakpoint) {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: ($size * 100% / $grid-columns);
+  }
+}

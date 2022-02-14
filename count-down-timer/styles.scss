@@ -1,0 +1,86 @@
+@import 'grid';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  font-family: sans-serif;
+  background-color: azure;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  flex-direction: column;
+
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+  }
+
+  .banner {
+    padding-right: 2rem;
+  }
+
+  .info {
+    width: 90%;
+  }
+
+  .title,
+  .subtitle {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .title {
+    color: rgb(6, 121, 156);
+  }
+
+  .description {
+    margin: 2.5rem 0;
+    line-height: 1.8;
+    color: rgb(112, 112, 112);
+  }
+
+  .timer {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      background: rgb(6, 121, 156);
+      color: #fff;
+      margin-right: 1rem;
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+
+      .number {
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
