@@ -36,8 +36,8 @@ items.forEach((item) => {
 
 // get all the nubers and operator. then calculate
 function calculate(firstNumber, secondNumber, operator) {
-  firstNumber = parseInt(firstNumber);
-  secondNumber = parseInt(secondNumber);
+  firstNumber = parseFloat(firstNumber);
+  secondNumber = parseFloat(secondNumber);
 
   switch (operator) {
     case '+':

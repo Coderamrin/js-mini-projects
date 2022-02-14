@@ -1,0 +1,89 @@
+@import 'grid';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  padding-bottom: 1rem;
+}
+
+.container {
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  margin: 3rem auto;
+  // background-color: aquamarine;
+}
+
+.board {
+  padding: 1rem;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    background-color: beige;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+}
+
+.card {
+  background-color: aquamarine;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 5px;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  cursor: grab;
+
+  &__container {
+    height: 100%;
+  }
+}
+
+.add-new-card {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+
+  input {
+    width: 60%;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 35%;
+    border: 1px solid black;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
