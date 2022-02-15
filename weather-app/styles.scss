@@ -1,0 +1,87 @@
+@import 'grid';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(22, 1, 73);
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 2rem;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
+}
+
+.weather-app {
+  &__info {
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .form {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+    input {
+      color: #fff;
+      background: none;
+      border: none;
+      border-bottom: 2px solid #fff;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    button {
+      color: #fff;
+      background-color: rgb(248, 7, 196);
+      padding: 0.5rem 1rem;
+      margin-left: 0.3rem;
+      border: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__card {
+    text-align: center;
+    width: 250px;
+    background-color: rgb(35, 148, 148);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+
+    h2 {
+      font-size: 2.8rem;
+      padding-top: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather app</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/dist/css/styles.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="weather-app">
+        <div class="weather-app__info">
+          <h1>Check Weather</h1>
+
+          <form class="form" id="form">
+            <input type="text" placeholder="Search for a city" id="formInput" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <div class="weather-app__grid">
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="/config.js"></script>
+    <script src="./dist/script.js"></script>
+  </body>
+</html>
