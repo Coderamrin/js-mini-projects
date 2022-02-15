@@ -1,0 +1,66 @@
+@import 'grid';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: lightseagreen;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
+.hide {
+  background-color: red;
+}
+
+.container {
+  text-align: center;
+}
+
+.modal {
+  background-color: rgb(3, 42, 128);
+  padding: 8rem 4rem;
+  border-radius: 0.2rem;
+  position: relative;
+  // width: 100%;
+  // height: 100%;
+  top: 40px;
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+
+  &_hide {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+.show {
+  z-index: -1;
+}
