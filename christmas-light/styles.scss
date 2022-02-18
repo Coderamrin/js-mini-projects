@@ -1,0 +1,117 @@
+@import 'grid';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  //center horizontally and vertically
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.lights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.5s ease;
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(255, 0, 0, 57);
+  }
+}
+
+.blue {
+  background-color: rgb(87, 89, 243);
+
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(87, 89, 243, 57);
+  }
+}
+.green {
+  background-color: rgb(0, 255, 0);
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(0, 255, 0, 57);
+  }
+}
+.orange {
+  background-color: rgb(255, 165, 0);
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(255, 165, 0, 57);
+  }
+}
+.pink {
+  background-color: rgb(255, 0, 255);
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(255, 0, 255, 57);
+  }
+}
+.purple {
+  background-color: rgb(128, 0, 128);
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(128, 0, 128, 57);
+  }
+}
+.black {
+  background-color: rgb(0, 0, 0);
+  &.blur {
+    box-shadow: 1px 1px 30px 0.5px rgba(0, 0, 0, 57);
+  }
+}
+
+.controler {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  // border: 2px solid red;
+  margin-top: 8rem;
+
+  button {
+    padding: 0.4rem;
+    cursor: pointer;
+    // border: 2px solid rgb(0, 0, 117);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .start-stop {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1.2rem 0.5rem;
+  }
+
+  input {
+    width: 50px;
+    padding: 0.5rem 0.2rem;
+  }
+}
