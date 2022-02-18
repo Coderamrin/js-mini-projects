@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/css/styles.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="border-container">
+        <div class="sliders sliders-top">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="slider top-left"
+            id="top-left"
+          />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="slider slider-vertical top-right"
+            id="top-right"
+          />
+        </div>
+
+        <div class="border-box-wrap">
+          <div class="border-box"></div>
+        </div>
+
+        <div class="sliders sliders-bottom">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="slider bottom-left"
+            id="bottom-left"
+          />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="slider slider-vertical bottom-right"
+            id="bottom-right"
+          />
+        </div>
+      </div>
+
+      <div class="preview-container">
+        <p class="name">border-radius:</p>
+        <div>
+          <p class="value" id="value">0% 0% 0% 0%</p>
+          <button class="copy" id="copy">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./dist/script.js"></script>
+  </body>
+</html>
