@@ -12,4 +12,57 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.input-container {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  .inputs {
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    width: 100px;
+    padding: 1rem;
+    border: 2px solid rgb(2, 25, 73);
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  button {
+    width: 50%;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgb(2, 25, 73);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+
+    &:hover {
+      background-color: rgb(2, 25, 73);
+      color: #fff;
+    }
+  }
+}
+
+.preview-box {
+  width: 100%;
+  height: 80vh;
+  background-color: #ff5733;
+  transition: all 0.3s ease-in-out;
 }
